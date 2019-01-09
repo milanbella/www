@@ -51,7 +51,7 @@ export class AuthPrincipalTest {
 
 	private logIn () : Promise<any>  {
 
-		return this.auth._login('d3@pemax.sk', 'Pem23ax23', false).then((data) => {
+		return this.auth._login('d3@pemax.sk', '', false).then((data) => {
 			if (data.err) {
 				console.error('Auth.login(): error:');
 				console.dir(data.err);
