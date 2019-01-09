@@ -1,0 +1,428 @@
+{
+    "ITEM_FROM":"From",
+    "CONFIRMDDO_CONFIRMED_QTY":"Confirmed quantity",
+    "CHANGE_LANGUAGE":"Change language",
+    "PIN_AGAIN":"PIN (again / verify)",
+    "CANCEL":"Cancel",
+    "CONTINUE":"Continue",
+    "APPTITLE_QRSCANNER":"QR Scanner",
+    "LOGIN":"Login",
+    "LOGIN_BY_PIN":"Login by PIN",
+    "LOGIN_BY_EMAIL":"Login by Email",
+    "ENTER_OR_SCAN_PIN":"Authorize",
+    "NEXT":"Next",
+    "TAB_WMS":"WMS",
+    "EMAIL":"E-Mail",
+    "CLASSIC_LOGIN":"Back to classic login",
+    "BACK":"Back",
+    "APPTITLE_INFO_LOT":"Lot info",
+    "APPTITLE_INFO_HU":"HU info",
+    "APPTITLE_DDO":"Confirm order",
+    "TAB_DEV":"DEV",
+    "ITEM_TO":"To",
+    "ITEM_FROM_TO":"F/T",
+    "LANGUAGE":"Language",
+    "TAB_CRM":"CRM",
+    "APPTITLE_DEV_DBBROWSER":"Database browser",
+    "SCAN":"Scan",
+    "SCANNER":"Scanner",
+    "ORGANIZATION":"Organization",
+    "WAREHOUSE":"Warehouse",
+    "SET_NEW_PIN":"Set new PIN",
+    "CONFIRMDDO_SCRAPPED_QTY":"Scrapped quantity",
+    "CONFIRMDDO_ORDERED_QTY":"Ordered quantity",
+    "CONFIRMDDO_SCAN_LOT":"Scan lot",
+    "CONFIRMDDO_CONFIRM_LOT":"Confirm Lot",
+    "CONFIRMDDO_TITLE_DETAIL":"Detail of DDO",
+    "USERNAME":"Username",
+    "PASSWORD":"Password",
+    "PIN":"PIN",
+    "NEXT_STEP":"Next step",
+    "APPLICATIONS":"Applications",
+    "SHIPFROMHU_CREATE":"Create shipment",
+    "CONFIRMDDO_SCAN_DDO":"Scan DDO",
+    "CONFIRMDDO_SEND":"Confirm and move",
+    "LOTNO":"Lot No",
+    "CONFIRMDDO_CONFIRM_QTY":"Comfirm Quantity",
+    "LOCATOR":"Locator",
+    "LOCATOR_INFO":"Locator Info",
+    "ITEM_PRODUCT":"Product",
+    "DBBROWSER_RESET_BTN":"Reset DB",
+    "NO_VALUE":"No value",
+    "QUANTITY":"Qty",
+    "APPTITLE_QUICKMOVE":"Quick Move",
+    "APPSTEP":"Step",
+    "AD_Mobile_Device_ID":"Mobile Device",
+    "APPTITLE_PREFERENCES":"Preferences",
+    "SCANNER_TYPE":"Scanner Type",
+    "APPTITLE_INBOX":"Inbox",
+    "INVALID_PIN_REQUIREMENTS":"PIN must be at least 4-6 numbers",
+    "TOKEN_EXPIRED":"Token expired / Logout",
+    "SCAN_RESULT":"Scanned result",
+    "CONFIRMDDO_MANUAL":"Confirm w/o Scan",
+    "AD_Mobile_Device_UU":"AD_Mobile_Device_UU",
+    "AD_Mobile_Device_UserIdent_ID":"AD_Mobile_Device_UserIdentities",
+    "APPTITLE_SHIP_CREATE_F_HU":"Delivery HU",
+    "SCANNER_TYPE_CAMERA":"Mobile Camera",
+    "LOADING":"Loading",
+    "CONFIRMDDO_BAD_LOT":"Scanned Lot is not expected.",
+    "SCAN_BARCODE_OR_QR":"Scan EAN/2D",
+    "AD_Mobile_Device_UserIdent_UU":"AD_Mobile_Device_UserIdent_UU",
+    "Device_UUID":"Device UUID",
+    "APPTITLE_INVMOVE":"Inventory Move",
+    "WRONG_PIN":"Wrong PIN",
+    "WRONG_CREDENTIALS":"Wrong Credentials",
+    "CONFIRMDDO_CONFIRMED":"Successful confirmation",
+    "SHIPFROMHU_CREATED":"Shipment was created",
+    "PIN_SET_OK":"PIN is set (?)",
+    "DBBROWSER_RESET_OK":"Database was reset.",
+    "LOTINFO_UNKNOWN":"Unknown lot",
+    "CONFIRMDDO_ERROR":"Rejected confirmation",
+    "DBBROWSER_TABLE_LIST_ERROR":"Database table list failed",
+    "SHIPFROMHU_CREATE_FAILED":"Shipment was not created",
+    "CONFIRMDDO_WAS_OPENED":"DDO was previously opened. Open?",
+    "SCANNER_TYPE_DATAWEDGE":"Symbol Datawedge",
+    "INVALID_PIN_EQUALITY":"PINs must be equal. Enter PIN again.",
+    "CONFIRMDDO_UNKNOWN":"Unknown Order",
+    "UNKNOWN_ERROR":"Unknown ERROR / contact administrator",
+    "SHIPFROMHU_QR_HU_MISSING":"No HU info in QR code.",
+    "SHIPFROMHU_ALREADY_SCANNED":"HU is scanned already.",
+    "DBBROWSER_RESET_FAILED":"Database reset failed",
+    "HUINFO_UNKNOWN":"Unknown handling unit",
+    "QRSCANNER":"QR Scanner",
+    "INFO_LOT":"Lot info",
+    "INFO_HU":"HU info",
+    "SHIP_CREATE_F_HU":"Delivery HU",
+    "SHIPMENT_ITEM":"Line/Delivery",
+    "GO_TO_LINES":"Go to Lines",
+    "CONFIRM_DDO":"DDO",
+    "DDO_LINE":"DDO Line",
+    "INVMOVE":"Inventory Moves",
+    "INVMOVE_ITEM":"IM Line",
+    "INVMOVE_LINE_DETAIL":"IM Line Detail",
+    "CREATE_INVMOVE":"Create Inventory Move",
+    "DOCUMENT_TYPE":"Document Type",
+    "TYPE":"Type",
+    "SOURCE":"Source",
+    "LINES":"Lines",
+    "QUICKMOVE":"Quick Move",
+    "ASI":"ASI",
+    "SAVE":"Save",
+    "TRANSIT":"Transit",
+    "CONFIRM":"Confirm",
+    "SEARCH_KEY":"Search Key",
+    "NAME":"Name",
+    "GENERATED_SHORTCODE_FOR_QUICK_LOGIN":"System generated shortcode for quick login",
+    "NO INTERNET CONNECTION":"No internet connection!",
+    "VERSION_0.2 Beta._LOGIN_REQUIRE":"Version 0.2 Beta. Login Require",
+    "ACCOUNT":"account",
+    "UNASSIGNED":"Unassigned",
+    "WORKING_ON":"Working On",
+    "MY":"My",
+    "LOST":"Lost",
+    "NOTICE":"Notice",
+    "APPTITLE_BUSINESS_PARTNER":"Business Partner",
+    "APPTITLE_SETTINGS":"Settings",
+    "APPTITLE_PRODUCTS":"Products",
+    "APPTITLE_LOCATORS":"Locators",
+    "APPTITLE_USERS":"Users",
+    "APPTITLE_IDENTITY":"Identity",
+    "APPTITLE_DB_BROWSER":"DB Browser",
+    "BUSINESS_PARTNER":"Business Partner",
+    "BP_DETAIL":"BP Detail",
+    "USERS":"Users",
+    "CONFIRMDDO_DDO_PROCESSED":"Confirm DDO processed",
+    "DELETE":"Delete",
+    "ACTIONS":"Actions",
+
+    "FILTER_INVMOVE":"Filter Moves",
+    "MOVEMENTDATE":"Movement Date",
+    "C_BPARTNER_ID":"Business Partner",
+
+    "Date":"Date",
+    "M_Warehouse_ID":"Warehouse",
+    "M_Locator_ID":"Locator",
+    "M_LocatorTo_ID":"Locator To",
+    "M_Product_ID":"Product",
+    "AD_Org_ID":"Organization",
+    "C_DocType_ID":"DocType",
+    "SalesRep_ID":"Sales Rep",
+    "Stockkeeper_ID":"Stockkeeper",
+    "QtyCount":"Counted",
+    "QtyBook":"Booked",
+    "Description":"Description",
+    "PhysInvCount":"Inventory Lines",
+    "PhysInvCountList":"Physical Inventories",
+    "PhysInvCountLineEdit":"Phys. Inv. Line",
+    "PhysInvCountEdit":"Phys. Inv. Edit",
+
+    "QtyEntered":"Qty",
+    "QtyOrdered":"OrdQty",
+    "QtyReserved":"ResQty.",
+    "M_PriceList_ID":"Pricelist",
+    "PriceList":"List Price",
+    "PriceStd":"Price",
+    "PriceLimit":"Limit Price",
+    "Discount":"Discount %",
+    "DiscountShort":"Disc.%",
+    "LineNetAmt":"Line Amt",
+    "LineNetAmtShort":"Sum",
+
+    "Margin":"Margin %",
+    "MarginAmt":"Margin",
+    "TaxRate":"Rate",
+    "TaxAmt":"Tax",
+    "TaxBaseAmt":"Base",
+    "VAT": "VAT",
+
+    "Total":"Total",
+    "PosOrders":"POS Orders",
+    "PosOrderEdit":"Pos Order Edit",
+    "PosOrderLineEdit":"POS Line Edit",
+    "PrintPreview":"Print Preview",
+
+    "AddNewLine":"New Line",
+    "Line":"Line",
+
+    "Confirm":"Confirm",
+
+    "APPTITLE_PHYSINV":"Physical Inventory",
+    "APPTITLE_POS":"POS",
+
+    "NewDocument": "New Document",
+    "Post": "Post",
+    "MandatoryProduct":"Product Mandatory",
+
+    "DocumentCreated":"Document Created",
+
+    "NewLine": "New Line",
+    "EditDocument": "Edit Inventory",
+    
+    "UnknownProduct": "Unknown Product",
+
+    "NetworkWentOffline": "Went Offline",
+    "NetworkWentOnline": "Went Online",
+
+    "PleaseWait": "Please Wait...",
+
+    "Category": "Category",
+
+    "Search": "Search",
+    "DBInit": "Initializing database ...",
+    
+    "PosTerminalNotInitialized": "POS Terminal not Initialized",
+
+    "PhysInvCountLineWizard": "Inventory Wizard",
+    "PhysInvCountLineWizardQty": "Enter Counted Quantity",
+    "PhysInvCountLineWizardLocator": "Enter Warehouse Locator",
+
+    "InvMove":"Movement Lines",
+    "InvMoveList":"Inventory Moves",
+    "InvMoveLineEdit":"Inv. Move Line",
+    "InvMoveEdit":"Inv. Move Edit",
+    "InvMoveLineWizard":"IM Line Wizard",
+
+    "InvMoveLineWizardQty": "Enter Movement Quantity",
+    "InvMoveLineWizardLocator": "Source Locator",
+    "InvMoveLineWizardLocatorTo": "Locator To",
+
+    "CLOSE": "Close",
+    "SUBMIT": "Submit",
+
+    "C_Bpartner_Location": "Bpartner Location",
+  
+    "SalesOrder": "Sales Order",
+    "StandardOrder": "Standard Order",
+    "StandardOrder_Description": "This order type create reservation of goods",
+    "WarehouseOrder": "Order with Delivery",
+    "WarehouseOrder_Description": "This order type create Delivery Note in backend",
+    "CreditOrder": "Order with Invoice",
+    "CreditOrder_Description": "This order type create Delivery Note and Sales Invoice",
+    "POSOrder": "POS Order",
+    "POSOrder_Description": "This order type create Delivery Note, Invoice, Cash entries",
+
+    "SendRMA":"POS RMA",
+    "StandardRMA_Description":"This order type create RMA, Customer Return, Credit Memo, Cash entries",
+
+
+    "ExitFromAppTitle": "Exit from Application",
+    "ExitFromAppMessage": "Do you want really exit from application ?",
+    "EXIT": "Exit",
+
+    "Drafts": "Opened",
+    "Processed": "Processed",
+    "Returns": "Return",
+
+    "NewSales": "New",
+
+    "DocumentNo": "Doc.No.",
+    "C_BPartner_ID": "Business Partner",
+    "C_Customer_ID": "Customer",
+    "C_BPartner_Location_ID": "Order Location",
+    "Bill_Location_ID": "Bill Location",
+
+    "DisallowedPOSBpartner": "Disallowed POS Bpartner",
+
+    "DocumentsSynced": "Synced Documents: ",
+
+    "DocumentSent": "Document Sent",
+    "DocumentNotSent": "Document Can't be Sent",
+    "ProcessingOrder": "Order Processing",
+    "ProcessIt": "Process It",
+
+    "ProcessingDocMessage": "After processing additional changes can't be done",
+
+
+    "ProductIsNotOnPriceList": "Product is not on Pricelist",
+    
+    "APPTITLE_COMMANDCONSOLE": "WMS CONSOLE",
+    
+    "PhysInvCountLineWizardMerge": "Merge Count Conflict",
+    "OldQtyCount": "Old Qty",
+    "NewQtyCount": "Counted Qty",
+    "MergedQtyCount": "Merged Qty",
+
+    "MandatoryLocator":"Locator is Mandatory",
+
+    "Defaults":"Defaults",
+    "SelectDate":"Select Date",
+
+    "FILTER_PHYSINV":"Filter Counts",
+
+    "Ownership":"Ownership",
+
+    "NoPackagesExists":"Exist",
+    "NoPackagesCreate":"Create",
+    "NoPackagesTotal":"Total",
+  
+    "DocsScanAndAssign":"Assign Stockeeper",
+    "DocsScanPick":"Scan Pick List",  
+    "DocsScanMovement":"Scan Inventory Move",      
+    "GeneratePackageFailed":"Generate Package Failed",
+
+    "PrintAndNext":"Print & Next", 
+    "PrintAndLogout":"Print & Logout",
+
+    "CreatePackageAndPrintLabel":"Create Package And Print Label",
+
+    "NoOfLabels":"No. of Packages",
+
+    "StockeeperUpdated":"Stockeeper Updated",
+
+    "ProductDetail":"Product Detail",
+    "SearchProductWelcome":"Scan, Search or select by Category",
+    
+    "SearchProduct":"Search All Products...",
+
+    "AssignBarcodetoProduct":"Assign Barcode",
+
+    "C_UOM_ID":"UOM",
+    "QtyOnHand":"Qty On Hand",
+    "QtyOnHandSum":"Sum",
+    "QtyZero":"Zero",
+    
+    "InternalNotes":"Internal Notes",
+    "Help":"Comment",
+
+    "StorageLevelsTab":"Storage",
+    "DetailsTab":"Details",
+    "NotesTab":"Notes",
+    "PurchasingTab":"Purchasing",
+
+    "Barcode":"EAN",
+    "DefaultLocator":"Default Locator",
+    "VendorProductNo":"Vendor Product No",
+    "NotSynced":"Not Synced",
+
+    "CostAndMargin":"Cost & Margin",
+
+    "WasteRecyclingFee":"Rec. Fee",
+
+    "PaymentTypeCash":"Cash",
+    "PaymentTypeCreditCard":"Credit Card",
+
+    "SelectPaymentType":"Select Payment Type",
+
+    "AssignBarcodeTitle":"Assign",
+    "AssignBarcodebyScan":"Scan/Assign Barcode",
+    
+    "RecordIsProcessed":"Record is Processed",
+
+    "ListPriceCantBeZero":"List Price Can't be Zero",
+
+    "AllItems":"All",
+    "ConfirmedItems":"Conf.",
+    "UnConfirmedItems":"Unconf.",
+
+    "DateLastInventory":"Last Inventory",
+    "CreateInvCountList":"Create Count List",
+    "PhysInvCountListCreate":"Create Count List",    
+    "QtyRange":"Qty Range",
+    "InventoryCountSet":"Set Count to",
+    "DeleteOld":"Delete Old",
+    "IsQtyConfirmed":"Qty Confirmed",
+
+    "SendConfirmedTitle":"Posting Confirmation",
+    "SendConfirmedMsg":"You can continue work or post processed document",
+
+    "DeleteUnconfirmedTitle":"Send or Continue",
+    "DeleteUnconfirmedMsg":"You can continue or send confirmed items. Not Confirmed will be deleted.",
+
+    "PhysInvCountLineConfirmWizard":"Confirm Quantity Wizard",
+
+    "SearchResultCount":"Found",
+
+    "DocAction":"Document Action",
+    "PrepareIt":"Prepare",
+    "CompleteIt":"Complete",
+
+    "QtyDiff":"Diff.",
+
+    "ToPay":"To Pay",
+    "EmailRecipient":"Email Receipt",
+    "PrintReceipt":"Print Receipt",
+    "Remaining":"Remaining",
+    "OrderPayed":"Order Payed",
+    "Send":"Send",
+
+    "SqsMsgCount":"Messages to Receive",
+    "AllocationsTab":"Allocations",
+    "PricesTab":"Prices",
+
+    "Header_TableName":"Table Name",
+    "Count_Records":"Records",
+
+    "ReactivateIt":"Reactivate",
+    "ReactivateIt_Msg":"You can Re-Activate the document. Will be listed in drafts you can change it",
+    "ProcessingOrder_NotPostedMsg":"Document was processed and moved to Not synced",
+
+
+    "BPartnerMandatory":"BPartner Mandatory",
+    "BillLocationMandatory":"Bill Location Mandatory",
+    "BPartnerLocationMandatory":"BP Order Location Mandatory",
+
+    "POSAutoPOST":"Post Immediately",
+
+    "Print":"Print",
+    "PrintPackages":"Generate/Print Packages",
+    "PrintMessage":"Label was Printed",
+    "PrintMessageFailed":"Label Print failed, check your printer",
+    "ChangeLocatorTo":"Post Immediately",
+    "MovementQty":"Qty",
+    "Qty":"Qty",
+
+    "FinishRMA":"Do you want to finish on Return ?",
+
+    "Product":"Product",
+    "StockKeeperUpdated": "Stock Keeper updated Sucessfully."
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+}

@@ -1,0 +1,430 @@
+{
+    "ITEM_FROM":"Z",
+    "CONFIRMDDO_CONFIRMED_QTY":"Potvr. Mnž.",
+    "CHANGE_LANGUAGE":"Zmeniť jazyk",
+    "PIN_AGAIN":"PIN (overiť)",
+    "CANCEL":"Zrušiť",
+    "CONTINUE":"Pokračovať",
+    "APPTITLE_QRSCANNER":"QR Skener",
+    "LOGIN":"Prihlásenie",
+    "LOGIN_BY_PIN":"Prihlásenie PIN",
+    "LOGIN_BY_EMAIL":"Prihlásenie E-mail",
+    "ENTER_OR_SCAN_PIN":"Autorizácia",
+    "NEXT":"Ďalej",
+    "TAB_WMS":"WMS",
+    "EMAIL":"E-Mail",
+    "CLASSIC_LOGIN":"Späť na prihlásenie",
+    "BACK":"Späť",
+    "APPTITLE_INFO_LOT":"LOT Info",
+    "APPTITLE_INFO_HU":"HU Info",
+    "APPTITLE_DDO":"Dist.Obj.",
+    "TAB_DEV":"DEV",
+    "ITEM_TO":"Do",
+    "ITEM_FROM_TO":"Z/Do",
+    "LANGUAGE":"Jazyk",
+    "TAB_CRM":"CRM",
+    "APPTITLE_DEV_DBBROWSER":"DB prehliadač",
+    "SCAN":"Načítať",
+    "SCANNER":"Skenovanie",
+    "ORGANIZATION":"Organizácia",
+    "WAREHOUSE":"Sklad",
+    "SET_NEW_PIN":"Zadaj nový PIN",
+    "CONFIRMDDO_SCRAPPED_QTY":"Odpís. Mnž.",
+    "CONFIRMDDO_ORDERED_QTY":"Obj. Mnž.",
+    "CONFIRMDDO_SCAN_LOT":"Skenuj LOT",
+    "CONFIRMDDO_CONFIRM_LOT":"Potvrď LOT",
+    "CONFIRMDDO_TITLE_DETAIL":"Detaily DO",
+    "USERNAME":"Užívateľ",
+    "PASSWORD":"Heslo",
+    "PIN":"PIN",
+    "NEXT_STEP":"Ďalší krok",
+    "APPLICATIONS":"Aplikácie",
+    "SHIPFROMHU_CREATE":"Vytvor Dodák",
+    "CONFIRMDDO_SCAN_DDO":"Skenuj Dist.Obj.",
+    "CONFIRMDDO_SEND":"Potvrď a Presuň",
+    "LOTNO":"LOT",
+    "CONFIRMDDO_CONFIRM_QTY":"Potvrď Mnž.",
+    "LOCATOR":"Lokátor",
+    "LOCATOR_INFO":"Lokátor Info",
+    "ITEM_PRODUCT":"Produkt",
+    "DBBROWSER_RESET_BTN":"Reset DB",
+    "NO_VALUE":"Žiadna hodnota",
+    "QUANTITY":"Mnž.",
+    "APPTITLE_QUICKMOVE":"Rýchly Pohyb",
+    "APPSTEP":"Krok",
+    "AD_Mobile_Device_ID":"Mobilné Zariadenie",
+    "APPTITLE_PREFERENCES":"Nastavenia",
+    "SCANNER_TYPE":"Typ Scanneru",
+    "APPTITLE_INBOX":"Úlohy",
+    "INVALID_PIN_REQUIREMENTS":"PIN musí obsahovať 4-6 číslic",
+    "TOKEN_EXPIRED":"Token expiroval/ Odhlásenie",
+    "SCAN_RESULT":"Výsledok Skenu",
+    "CONFIRMDDO_MANUAL":"Potvrď bez Skenu",
+    "AD_Mobile_Device_UU":"AD_Mobile_Device_UU",
+    "AD_Mobile_Device_UserIdent_ID":"AD_Mobile_Device_UserIdentities",
+    "APPTITLE_SHIP_CREATE_F_HU":"Dodák z HU",
+    "SCANNER_TYPE_CAMERA":"Foťák",
+    "LOADING":"Načítanie",
+    "CONFIRMDDO_BAD_LOT":"Skenovaný LOT je neočakávaný",
+    "SCAN_BARCODE_OR_QR":"Skenuj EAN/ 2D",
+    "AD_Mobile_Device_UserIdent_UU":"AD_Mobile_Device_UserIdent_UU",
+    "Device_UUID":"Device UUID",
+    "APPTITLE_INVMOVE":"Pohyb Zásob",
+    "WRONG_PIN":"Nesprávny PIN",
+    "WRONG_CREDENTIALS":"Nesprávne Meno/Heslo",
+    "CONFIRMDDO_CONFIRMED":"Úspešné potvrdenie",
+    "SHIPFROMHU_CREATED":"Dodák vytvorený",
+    "PIN_SET_OK":"PIN je nastavený (?)",
+    "DBBROWSER_RESET_OK":"DB bola obnovená",
+    "LOTINFO_UNKNOWN":"LOT neznámy",
+    "CONFIRMDDO_ERROR":"Neúspešné potvrdenie",
+    "DBBROWSER_TABLE_LIST_ERROR":"Chyba DB tabuľky",
+    "SHIPFROMHU_CREATE_FAILED":"Dodák nebol vytvorený",
+    "CONFIRMDDO_WAS_OPENED":"Dist.Obj. bola predtým otvorená. Otvoriť ?",
+    "SCANNER_TYPE_DATAWEDGE":"Symbol Datawedge",
+    "INVALID_PIN_EQUALITY":"PIN musí byť rovnaký. Zadaj PIN znovu.",
+    "CONFIRMDDO_UNKNOWN":"Neznáma OBJ",
+    "UNKNOWN_ERROR":"Neznáma CHYBA/ kontaktuj administrátora",
+    "SHIPFROMHU_QR_HU_MISSING":"Žiadne HU info v QR kóde",
+    "SHIPFROMHU_ALREADY_SCANNED":"HU už naskenované",
+    "DBBROWSER_RESET_FAILED":"Obnovenie DB zlyhalo",
+    "HUINFO_UNKNOWN":"HU neznámy",
+    "QRSCANNER":"QR Skener",
+    "INFO_LOT":"Lot Info",
+    "INFO_HU":"HU Info",
+    "SHIP_CREATE_F_HU":"Dodák z HU",
+    "SHIPMENT_ITEM":"Riadky Dodávky",
+    "GO_TO_LINES":"Choď na riadky",
+    "CONFIRM_DDO":"Dist.Obj.",
+    "DDO_LINE":"Riadky DO",
+    "INVMOVE":"Pohyby Zásob",
+    "INVMOVE_ITEM":"Riadky Pohybu",
+    "INVMOVE_LINE_DETAIL":"Detaily Pohybu",
+    "CREATE_INVMOVE":"Vytvor Pohyb Zásob",
+    "DOCUMENT_TYPE":"Typ dokladu",
+    "TYPE":"Typ",
+    "SOURCE":"Zdroj",
+    "LINES":"Riadky",
+    "QUICKMOVE":"Rýchly Pohyb",
+    "ASI":"ASI",
+    "SAVE":"ULOŽIŤ",
+    "TRANSIT":"Tranzit",
+    "CONFIRM":"Potvrdiť",
+    "SEARCH_KEY":"Kľúč",
+    "NAME":"Názov",
+    "GENERATED_SHORTCODE_FOR_QUICK_LOGIN":"PIN pre rýchle príhlásenie:",
+    "YOUR_CODE":"Kód je:",
+    "NO INTERNET CONNECTION":"Žiadne internetové pripojenie!",
+    "VERSION_0.2 Beta._LOGIN_REQUIRE":"Verzia 0.2 Beta. Prihlásenie vyžaduje",
+    "ACCOUNT":"účet",
+    "NOTICE":"Správy",
+    "UNASSIGNED":"Nepridelené",
+    "WORKING_ON":"Rozpracované",
+    "MY":"Moje",
+    "LOST":"Stratené",
+    "APPTITLE_BUSINESS_PARTNER":"Obchodný Partner",
+    "APPTITLE_SETTINGS":"Nastavenia",
+    "APPTITLE_PRODUCTS":"Produkty",
+    "APPTITLE_LOCATORS":"Lokátory",
+    "APPTITLE_USERS":"Užívatelia",
+    "APPTITLE_IDENTITY":"Identita",
+    "APPTITLE_DB_BROWSER":"DB Prehliadač",
+    "BUSINESS_PARTNER":"Obchodný Partner",
+    "BP_DETAIL":"Detail OP",
+    "USERS":"Užívatelia",
+    "CONFIRMDDO_DDO_PROCESSED":"Dist. Obj. už bola spracovaná",
+    "DELETE":"Zmazať",
+    "ACTIONS":"Akcie",
+
+    "FILTER_INVMOVE":"Filter Pohybov",
+    "MOVEMENTDATE":"Dátum Pohybu",
+    "C_BPARTNER_ID":"O.Part.",
+
+    "Date":"Dátum",
+    "M_Warehouse_ID":"Sklad",
+    "M_Locator_ID":"Lokátor",
+    "M_LocatorTo_ID":"Lok/Do",
+    "M_Product_ID":"Produkt",
+    "AD_Org_ID":"Organizácia",
+    "C_DocType_ID":"Typ Dokladu",
+    "SalesRep_ID":"Obchodník",
+    "Stockkeeper_ID":"Skladník",
+    "QtyCount":"Spč.",
+    "QtyBook":"Účt.",
+    "Description":"Popis",
+    "PhysInvCount":"Riadky Inventúry",
+    "PhysInvCountList":"Fyzické Inventúry",
+    "PhysInvCountLineEdit":"Pridať/Úprava Riadku",
+    "PhysInvCountEdit":"Vytvorenie Inventúry",
+
+    "QtyEntered":"Mnž.",
+    "QtyOrdered":"Obj.Mnž.",
+    "QtyReserved":"Rez.Mnž.",
+    "M_PriceList_ID":"Cenník",
+    "PriceList":"Cenn. Cena",
+    "PriceStd":"Cena",
+    "PriceLimit":"Lim. Cena",
+    "Discount":"Zľava %",
+    "DiscountShort":"Zľ.%",
+    "LineNetAmt":"Celk. Riadok",
+    "LineNetAmtShort":"Celkom",
+
+    "Margin":"Marža %",
+    "MarginAmt":"Marža",
+    "TaxRate":"Sadzba",
+    "TaxAmt":"Daň",
+    "TaxBaseAmt":"Základ",
+    "VAT": "DPH",
+
+    "Total":"Celkom",
+    "PosOrders":"Zoznam Objednávok",
+    "PosOrderEdit":"Úprava Objednávky",
+    "PosOrderLineEdit":"POS/Úprava Riadku ",
+    "PrintPreview":"Náhľad Tlače",
+
+    "AddNewLine":"Nový Riadok",
+    "Line":"Riadok",
+
+    "Confirm":"Potvrdiť",
+
+
+
+    "APPTITLE_PHYSINV":"Inventúra",
+    "APPTITLE_POS":"Predaj",
+
+    "NewDocument":"Nový Doklad",
+    "Post":"Odoslať",
+    "MandatoryProduct":"Produkt je povinný",
+
+    "DocumentCreated":"Doklad Vytvorený",
+
+    "NewLine": "Nový Riadok",
+    "EditDocument": "Upraviť Doklad",
+
+    "UnknownProduct": "Neznámy Produkt",
+
+    "NetworkWentOffline": "Aplikácia je v stave Offline",
+    "NetworkWentOnline": "Aplikácia je v stave Online",
+
+    "PleaseWait": "Prosim čakajte...",
+
+    "Category": "Kategória",
+
+    "Search": "Hladať",
+
+    "DBInit": "Inicializácia Databázy ...",
+
+    "PosTerminalNotInitialized": "POS Terminál nebol Inicializovaný",
+
+    "PhysInvCountLineWizard": "Sprievodca inventúrou",
+    "PhysInvCountLineWizardQty": "Zadaj Spočítané Množstvo",
+    "PhysInvCountLineWizardLocator": "Zadaj Lokátor Skladu",
+
+    "InvMove":"Riadky Pohybu",
+    "InvMoveList":"Pohyby Zásob",
+    "InvMoveLineEdit":"Pridať/Úprava Riadku",
+    "InvMoveEdit":"Vytvorenie Pohybu",
+    "InvMoveLineWizard":"Sprievodca Riadku",
+
+    "InvMoveLineWizardQty": "Zadaj Množstvo Pohybu",
+    "InvMoveLineWizardLocator": "Zdrojový Lokátor",
+    "InvMoveLineWizardLocatorTo": "Cieľový Lokátor",
+
+    "CLOSE": "Zatvoriť",
+    "SUBMIT": "Potvrď",
+
+    "C_Bpartner_Location": "Adresa",
+
+    "SalesOrder": "Pred. Objednávka",
+    "StandardOrder": "Štandardná Objednávka",
+    "StandardOrder_Description": "Tento typ vytvorí rezerváciu na tovar",
+    "WarehouseOrder": "Objednávka s DL",
+    "WarehouseOrder_Description": "Tento typ vytvorí Objednávku a následne Dodací List",
+    "CreditOrder": "Objednávka na Faktúru",
+    "CreditOrder_Description": "Tento typ vytvorí Objednávku, Dodací List, Faktúru",
+    "POSOrder": "Predaj na Hotovosť",
+    "POSOrder_Description": "Tento typ vytvorí Objednávku, Dodací List, Faktúru, Hotovostný príjem",
+
+    "SendRMA":"POS Vratka",
+    "StandardRMA_Description":"Tento typ vytvorí Autorizáciu, Vratku, DP, Hotovostný výdaj",
+
+
+    "ExitFromAppTitle": "Zatvoriť Aplikáciu ?",
+    "ExitFromAppMessage": "Chcete zatvoriť aplikáciu ?",
+    "EXIT": "Zatvoriť",
+
+
+    "Drafts": "Otvorené",
+    "Processed": "Spracované",
+    "Returns": "Vratky",
+
+    "NewSales": "Nový",
+
+    "DocumentNo": "Doklad",
+    "C_BPartner_ID": "Obch.Partner",
+    "C_Customer_ID": "Zákazník",
+    "C_BPartner_Location_ID": "Adr.Dod.",
+    "Bill_Location_ID": "Adr.Fakt.",
+
+    "DisallowedPOSBpartner": "Nesprávny partner pre tento typ dokladu",
+
+    "DocumentsSynced": "Doklady synchronizované: ",
+    
+
+    "DocumentSent": "Doklad bol Odoslaný",
+    "DocumentNotSent": "Doklad nebol odoslaný",
+    "ProcessingOrder": "Spracovanie Objednávky",
+    "ProcessIt": "Spracovať",
+    "ProcessingDocMessage": "Po spracovaní ďalšie zmeny nebudú možné !",
+
+    "ProductIsNotOnPriceList": "Produkt sa nenachádza v cenníku",
+
+    "APPTITLE_COMMANDCONSOLE": "WMS Konzola",
+
+
+    "PhysInvCountLineWizardMerge": "Zlúčenie Množstiev",
+    "OldQtyCount": "Staré Mnž.",
+    "NewQtyCount": "Nové Mnž.",
+    "MergedQtyCount": "Zlúčené Mnž",
+
+    "MandatoryLocator":"Lokátor je povinný",
+
+    "Defaults":"Predvoľby",
+
+    "SelectDate":"Zvoliť Dátum",
+
+    "FILTER_PHYSINV":"Filtrovať Inventúru",
+
+    "Ownership":"Vlastník",
+    
+    "NoPackagesExists":"Existuje",
+    "NoPackagesCreate":"Vytvoriť",
+    "NoPackagesTotal":"Celkom",
+
+    "DocsScanAndAssign":"Priradenie Skladníka",
+    "DocsScanPick":"Načítaj vychystávací list",
+    "DocsScanMovement":"Načítaj Pohyb Zásob",
+    "GeneratePackageFailed":"Generovanie Balíka zlyhalo",
+
+    "PrintAndNext":"Ďalši Doklad", 
+    "PrintAndLogout":"Odhlásenie",
+
+    "CreatePackageAndPrintLabel":"Vytvorenie balíka a tlač štítku",
+
+    "NoOfLabels":"Počet Balíkov",
+
+    "StockeeperUpdated":"Skladník Aktualizovaný",
+
+    "ProductDetail":"Detaily Produktu",
+    "SearchProductWelcome":"Načítaj, hľadaj alebo zvoľ kategóriu",
+
+    "SearchProduct":"Minimálne 3 znaky...",
+
+    "AssignBarcodetoProduct":"Priradiť čiarový kód",
+
+    "C_UOM_ID":"MJ",
+
+    "QtyOnHand":"Na sklade",
+    "QtyOnHandSum":"Celkom",
+    "QtyZero":"Nula",
+
+    "InternalNotes":"Interné Poznámky",
+    "Help":"Poznámky",
+
+    "StorageLevelsTab":"Zásoby",
+    "DetailsTab":"Detaily",
+    "NotesTab":"Poznámky",
+    "PurchasingTab":"Nákup",
+
+    "Barcode":"Čiarový kód",
+    "DefaultLocator":"Základný Lokátor",
+    "VendorProductNo":"Dod. Kód",
+
+    "NotSynced":"Neodoslané",
+
+    "CostAndMargin":"Náklady a Marža",
+
+    "WasteRecyclingFee":"RP",
+
+    "PaymentTypeCash":"Hotovosť",
+    "PaymentTypeCreditCard":"Kreditná Karta",
+
+    "SelectPaymentType":"Zvoľ spôsob platby",
+
+    "AssignBarcodeTitle":"Priradiť",
+    "AssignBarcodebyScan":"Priradiť Čiarový kód",
+
+    "RecordIsProcessed":"Záznam bol spracovaný",
+
+    "ListPriceCantBeZero":"Cenníková cena nemôže byť nula",
+
+    "AllItems":"Všetky",
+    "ConfirmedItems":"Potvr.",
+    "UnConfirmedItems":"Nepotvr.",
+
+    "DateLastInventory":"Posledná Inv.",
+    "CreateInvCountList":"Vytvoriť inventúrny zoznam",
+    "PhysInvCountListCreate":"Vytvoriť inventúrny zoznam",
+    "QtyRange":"Mn. Zás.",
+    "InventoryCountSet":"Nast. Mnž.",
+    "DeleteOld":"Vymazať exist.",
+    "IsQtyConfirmed":"PotMn.",
+
+    "SendConfirmedTitle":"Potvrdzovanie Odoslania",
+    "SendConfirmedMsg":"Možete pokračovať alebo odoslať spracovaný doklad.",
+
+    "DeleteUnconfirmedTitle":"Odoslať  Alebo pokračovať",
+    "DeleteUnconfirmedMsg":"Možete pokračovať, alebo odoslať potvrdené položky (nepotvrdené budú zmazané)",
+
+    "PhysInvCountLineConfirmWizard":"Potvrdenie Spočítaného Množstva",
+
+    "SearchResultCount":"Nájdené",
+
+    "DocAction":"Akcia Dokladu",
+    "PrepareIt":"Pripraviť",
+    "CompleteIt":"Kompletizovať",
+
+    "QtyDiff":"Rozdiel",
+
+    "ToPay":"K Platbe",
+    "EmailRecipient":"Príjemca Emailu",
+    "PrintReceipt":"Tlačiť účet",
+    "Remaining":"Zostáva",
+    "OrderPayed":"Objednávka zaplatená",
+    "Send":"Odoslať",
+
+    "SqsMsgCount":"Správy na prijatie",
+    "AllocationsTab":"Alokácie",
+    "PricesTab":"Ceny",
+
+    "Header_TableName":"Názov tabulky",
+    "Count_Records":"Počet",
+
+    "ReactivateIt":"Re-aktivovať",
+    "ReactivateIt_Msg":"Doklad môžete re-aktivovať. Doklad sa presunie do záložky Návrhy",
+    "ProcessingOrder_NotPostedMsg":"Doklad bol spracovaný a presunutý do záložky Neodoslané",
+
+
+    "BPartnerMandatory":"Partner je povinný",
+    "BillLocationMandatory":"FA adresa je povinná",
+    "BPartnerLocationMandatory":"Adresa Obj. je povinná",
+
+    "POSAutoPOST":"POS odoslať okamžite",
+
+    "Print":"Tlačiť",
+    "PrintPackages":"Generovať/Tlačiť balíky",
+    "PrintMessage":"Štítok bol vytlačený",
+    "PrintMessageFailed":"Tlač štítku zlyhala, skontrolujte si tlačiareň",
+    "ChangeLocatorTo":"Zmena Cieľového Lokátora",
+    "MovementQty":"Mn.",
+    "Qty":"Mn.",
+    
+    
+    "FinishRMA":"Chcete spracovať vratku ?",
+
+    "Product":"Produkt",
+    "StockKeeperUpdated": "Skladník bol aktualizovaný."
+    
+
+
+ }

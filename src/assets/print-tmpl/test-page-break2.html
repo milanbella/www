@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test fixed and scrolling divs in a flexbox layout</title>
+    <style media="screen">
+    * {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    html {
+      height: 99%;
+    }
+    body {
+      background-color: green;
+      color: yellow;
+      font-size: 36px;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+    div.container {
+      display: flex;
+      flex: auto;
+      flex-direction: column;
+      max-height: 100%;
+    }
+    div.fixed {
+      flex: none;
+      height: 36px;
+    }
+    div.scrolling {
+      display: flex;
+      flex: auto;
+      overflow-y: auto;
+    }
+    div.bottom {
+      align-self: flex-end;
+    }
+    div.scrolling div.scrolled {
+      display: block;
+      background-color: purple;
+      color: red;
+      width: 100%;
+    }
+    p {
+      border-top: 1px solid black;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="fixed top">
+        Fixed top section
+      </div>
+      <div class="scrolling middle">
+        <div class="scrolled">
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+          <p>
+            Scrolling middle
+          </p>
+        </div>
+      </div>
+      <div class="fixed bottom">
+        Fixed bottom
+      </div>
+    </div>
+  </body>
+</html>

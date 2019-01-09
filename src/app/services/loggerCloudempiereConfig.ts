@@ -1,0 +1,2 @@
+export var LOGGER_CLOUDEMPIERE_ENVIRNONMENT = 'dev';
+

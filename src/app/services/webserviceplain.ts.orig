@@ -1,0 +1,33 @@
+import 'whatwg-fetch';
+import 'url-search-params-polyfill';
+
+export class WebServicePlain {
+	public webservice_url = 'https://apiv1.cloudempiere.com/alpha/';
+
+	getAccessTokenByBasic (email, password) : Promise<any> {
+
+		var search = new URLSearchParams();
+		search.append('EMail', email);
+		search.append('Password', password);
+
+		var request = new Request(this.webservice_url + 'cognauth' + '?' + search.toString(), {method: 'GET'});
+
+		return pingHttp()
+		.then(_.noop, () => {
+				return promiseReject('worker: no internet access');
+		}).then(() => {
+			return fetch(request).then((response) => {
+
+				return response.json().then((data) => {
+
+					var Data = data.Data;
+					return {
+						accessToken: Data.CognitoToken,
+						identityId: Data.CognitoId,
+						identityPoolId: Data.IdentityPoolID
+					};
+				});
+			});
+		});
+	};
+}

@@ -1,0 +1,449 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pemax Invoice</title>
+    <link rel="stylesheet" type="text/css" href="css/sheets-of-paper-a4.css">
+
+    <style>
+
+    body {
+        margin: auto;
+        font-size: 10px;
+        line-height: 12px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #272727;
+        }
+
+    h1 {
+        font-size: 1.8em;
+        padding: 0px;
+        margin:0px;
+    }
+    
+    h2 {
+        font-size: 15px;
+        padding: 0px;
+        margin:0px;
+    }
+
+
+    .page table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+
+    .page table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    .page table tr td:nth-child(2) {
+        text-align: left;
+    }
+
+    .page table tr.top table td {
+        padding-bottom: 0px;
+    }
+
+    .page table tr.top table .title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+
+    .page table tr.header-address table td {
+        padding-bottom: 0px;
+    }
+
+    .page table tr.header-address table td:nth-child(2) {
+        padding-left: 50px;
+    }
+
+    .page table tr.heading td {
+        padding-top:15px;
+        /* background: #eee; */
+        /* border-bottom: 1px solid #ddd; */
+        /* font-weight: bold; */
+        border-spacing: 10px;
+    }
+
+    .page table tr.head td {
+        background: #fff;
+        -webkit-print-color-adjust: exact; 
+        margin-top: 10px;
+        border-top: 1px solid #272727;
+        border-bottom: 1px solid #272727;
+        font-weight: bold;
+    }
+
+    .page table tr.details td {
+        padding-bottom: 20px;
+    }
+
+    .page table tr.item td{
+        border-bottom: 1px solid #eee;
+    }
+
+    .page table tr.item.last td {
+        border-bottom: none;
+    }
+
+    .page table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+
+    .page table tr.footer td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        margin-top: -50px;
+        /* font-weight: bold; */
+        /* border-spacing: 10px; */
+        
+    }
+
+    .page table tr.footnote table td {
+        border-top: 1px solid #4e4d4d;
+    
+    }
+
+    .page table tr.taxrates td table.tax-overview {
+        margin-top: 10px;
+        max-width: 50%;
+        margin-right: 0px;
+        margin-left: auto;
+        border-spacing: 0px 0px;
+    }   
+
+
+    .page table tr.taxrates td table tr.tax-overview-header {
+        background: #fff;
+        margin-top: 10px;
+        border-top: 1px solid #272727;
+        border-bottom: 1px solid #272727;
+        font-weight: bold;
+    }
+
+    .page table tr.taxrates td table tr.tax-overview-header td {
+        border-top: 1px solid #2d2d2d;
+        border-bottom: 1px solid #2d2d2d;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .page table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .page table tr.header-address table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+            padding-left: 0px !important;
+        }
+
+        .page table tr.taxrates td table.tax-overview {
+            margin-top: 20px;
+            max-width: 50%;
+            margin-right: 0px;
+            margin-left: auto;
+            border-spacing: 0px 10;
+        }
+
+        .page table tr.taxrates td table.tax-overview td {
+            width: 100%;
+            /* display:initial; */
+         }
+
+         .page table tr.taxrates td table tr.tax-overview-header td {
+             border-bottom: 1px solid #2d2d2d;
+             max-width: 100%;
+
+         }
+
+         .page table tr.footer table td  {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .page table tr.footnote table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+    }
+
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+
+    .rtl table {
+        text-align: right;
+    }
+
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+
+/* Cloudempiere styles*/
+
+    .boxed {
+        border-style: solid; 
+        border-color: #434343; 
+        border-width: 1px;
+    }
+
+    .split-half{
+        width: 50%;
+    }
+
+    .number-trail-right {
+        text-align: right;
+    }
+
+    .separator { 
+        height: 10px; 
+    }
+
+    .number { 
+        text-align: right; 
+    }
+
+    .pl-50 {
+        padding-left:50px;
+    }
+
+    @media print {
+
+        thead {
+            display: table-header-group;
+        }
+
+        tfoot   {
+            display: table-footer-group;
+        }
+
+    }   
+
+    </style>
+</head>
+
+<body class="document">
+    <div class="page">
+        <table cellpadding="0" cellspacing="0">
+           
+                <tr class="top">
+                    <td colspan="8">
+                        <table>
+                            <tr>
+                                <td class="split-50">
+                                    <h1>Faktúra: {{VarNo}}</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="header-address">
+                    <td colspan="8">
+                        <table>
+                            <tr>                                                           
+                                <td class="split-50 pl-50">
+                                    <b>Dod. adresa</b><br>
+                                    {{BPartner.Name}}<br>                                   
+                                    {{BPAddress.Address}}<br>
+                                    {{BPAddress.ZIP}}  {{BPAddress.City}}<br><br>
+                                    {{#BPartner.CompRegNo}} IČO: {{BPartner.CompRegNo}}<br>{{/BPartner.CompRegNo}} 
+                                    {{#BPartner.TaxID_Alternative}}DIČ: {{BPartner.TaxID_Alternative}}<br>{{/BPartner.TaxID_Alternative}} 
+                                    {{#BPartner.TaxID}}IČ DPH: {{BPartner.TaxID}}{{/BPartner.TaxID}}
+                                </td>
+                                <td class="split-50 boxed">
+                                    <b>Zákazník</b><br>
+                                    {{BPartner.Name}}<br>                                   
+                                    {{BillAddress.Address}}<br>
+                                    {{BillAddress.ZIP}}  {{BillAddress.City}}
+                                </td>  
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        <table>
+                            <tr class="heading">
+                                <td class="split-50"> 
+                                    <b>Dátum fakt.:</b> {{DateCreated}}
+                                </td>
+
+                                <td class="split-50">
+                                    <b>Dátum dod.:</b> {{DateDue}} 
+                                </td>
+
+                                <td class="split-50"> 
+                                    <b>Zák. číslo:</b> {{BPartner.Value}}
+                                </td>
+                    
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <table cellpadding="0" cellspacing="0">
+                        <thead> 
+                            <tr class="head">
+                                    
+                                <td>
+                                    #
+                                </td> 
+                                <td>
+                                    Produkt
+                                </td>                   
+                                <!-- <td class="number-trail-right">
+                                    RPJ
+                                </td> -->
+                                <td class="number-trail-right"> 
+                                    RP
+                                </td>
+
+                                <td class="number-trail-right">
+                                    Mn.
+                                </td>
+
+                                <td class="number-trail-right">
+                                    MJ
+                                </td>
+
+                                <td class="number-trail-right">
+                                    JC
+                                </td>
+
+                                <td class="number-trail-right">
+                                    Spolu
+                                </td>
+                                <td class="number-trail-right">
+                                    DPH%
+                                </td>
+                            </tr>
+                        </thead>
+            
+                        {{#Items}}
+                        <tr class="item">
+                            <td>
+                                {{Line}}.
+                            </td>
+                            <td>
+                                {{Name}}, {{UPC}}
+                            </td>
+                            <!-- <td class="number-trail-right">
+                                    {{WasteFee}}
+                            </td> -->
+
+                            <td class="number-trail-right">
+                                {{WasteFeeSum}}
+                            </td>
+
+                            <td class="number-trail-right">
+                                {{Qty}}
+                            </td>
+
+                            <td class="number-trail-right">
+                                {{UOM}}
+                            </td>
+
+                            <td class="number-trail-right">
+                                {{Price}}
+                            </td>
+                            <td class="number-trail-right">
+                                {{LineNetAmt}} 
+                                <!-- TotalPrice @REFACTOR@ proper name is linenetAmt-->
+                            </td>
+                            <td class="number-trail-right">
+                                {{TaxRate}}
+                                <!-- TotalPrice @REFACTOR@ proper name is linenetAmt-->
+                            </td>
+                        </tr>
+                        {{/Items}} 
+                    </table>
+                    </td>
+                 
+                </tr>
+                <tr class="taxrates">
+                    <td colspan="8">
+                        <table class="tax-overview">
+                                <thead>
+                                    <tr class="tax-overview-header">
+                                        <td>Sadzba</td>    
+                                        <td class="number-trail-right">Základ</td>
+                                        <td class="number-trail-right">Daň</td>
+                                        <td class="number-trail-right">Spolu</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="content2">
+                                {{#TaxRates}}
+                                    <tr>
+                                        <td>{{TaxRate}}%</td>    
+                                        <td class="number">{{TaxBase}}</td>
+                                        <td class="number">{{TaxAmt}}</td>
+                                        <td class="number">{{TotalLine}}</td>
+                                    </tr>
+                                {{/TaxRates}}
+                                </tbody>
+                        </table> 
+                    </td>
+                </tr>
+                   
+
+                <tr class="total">
+                    <td colspan="8" class="number-trail-right">
+                        <h2>Celkom: {{GrandTotal}} EUR</h2>
+                    </td>
+                </tr>
+      
+
+        <div class="page-break">
+
+            <table id="footer">
+                <tr class="footnote">
+                        <td colspan="8">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Dodávateľ: Ing. Róbert Pecho P.E.MAX<br>
+                                        Brezová 10, 949 01 Nitra<br>
+                                        IČO:11984112, IČDPH:SK1020389601</br>
+                                        OÚ Nitra OŽPaOS pod reg.č.403-5173
+                                    </td>
+                                    <td>Banka: VÚB a.s. <br>
+                                        IBAN: SK64 0200 0000 0020 4899 2554</br>
+                                        SWIFT: SUBASKBX</br>
+                                        
+                                    </td>
+                                    <td>
+                                        Tel.: +421 377 413 545</br>
+                                        E-mail: pemax@pemax.sk</br>
+                                        Tlač: {{DatePrinted}}
+                                    </td>
+                                    <!-- <td>LOGO</td> -->
+                                </tr>
+                            </table>
+                        </td>
+                </tr>
+            </table>
+        </div>
+
+
+        </table>
+        
+    </div>
+</body>
+</html>
