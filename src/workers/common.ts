@@ -1,17 +1,14 @@
-import { promiseReject } from '../app/common/utils';
-import { IWorkerMessage }  from '../app/services/types';
-import { NET_WORKER }  from '../app/services/types';
-import { pingHttp as basePingHttp } from './../app/services/pinghttp';
-import { Principal } from '../app/services/types';
+import { IWorkerMessage } from '../types';
+import { NET_WORKER } from '../types';
+import { pingHttp as basePingHttp } from '../pinghttp';
 import { workerCtx } from './workerCtx';
 
-var _self: any = self;
-
+let _self: any = self;
 
 // Send message to main thread and returns reply;
-export function sendMessage  (msg: IWorkerMessage) : Promise<any>  {
-	return new Promise<any> ((resolve, reject) => {
-		var channel = new MessageChannel();
+export function sendMessage(msg: IWorkerMessage): Promise<any> {
+	return new Promise<any>((resolve, reject) => {
+		let channel = new MessageChannel();
 
 		_self.postMessage(msg, [channel.port2]);
 
@@ -21,36 +18,42 @@ export function sendMessage  (msg: IWorkerMessage) : Promise<any>  {
 				return;
 			}
 			resolve(event.data);
+		};
+	});
+}
+
+export function pingHttp(): Promise<any> {
+	let msg: IWorkerMessage = {
+		workerId: workerCtx.workerId,
+		workerName: workerCtx.workerName,
+		dstWorkerName: NET_WORKER,
+		messageName: 'offline',
+		messageData: {},
+	};
+	return basePingHttp().then(
+		function (v) {
+			msg.messageData.offline = false;
+			sendMessage(msg);
+			return v;
+		},
+		function (v) {
+			msg.messageData.offline = true;
+			sendMessage(msg);
+			return Promise.reject(v);
 		}
-	});
+	);
 }
 
-export function pingHttp () : Promise<any> {
-	var msg: IWorkerMessage = {
+export function refreshPrincipal(): Promise<any> {
+	let msg: IWorkerMessage = {
 		workerId: workerCtx.workerId,
-		workerName: workerCtx.workerName, 
-		dstWorkerName: NET_WORKER, 
-		messageName: 'setOfflinneState',
-		messageData: {}
-	}
-	return basePingHttp().then(function (v) {
-		msg.messageData.offline = false;
-		sendMessage(msg);
-		return v;
-	}, function (v) {
-		msg.messageData.offline = true;
-		sendMessage(msg);
-		return promiseReject(v);
-	});
-}
-
-export function refreshPrincipal () : Promise<any> {
-	var msg: IWorkerMessage = {
-		workerId: workerCtx.workerId,
-		workerName: workerCtx.workerName, 
+		workerName: workerCtx.workerName,
 		messageName: 'refreshPrincipal',
-		messageData: {}
-	}
+		messageData: {},
+	};
 	return sendMessage(msg);
 }
 
+export interface MessageRateCounter {
+	eventSource: EventSource;
+}

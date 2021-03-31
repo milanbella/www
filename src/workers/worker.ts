@@ -1,52 +1,79 @@
-import { promiseReject } from '../app/common/utils';
-import { IWorkerMessage, WorkerCtx }  from '../app/services/types';
-import { NET_WORKER }  from '../app/services/types';
-import { pingHttp as basePingHttp } from './../app/services/pinghttp';
-import { workerCtx, setSettings } from './workerCtx';
-import { listenToEvenets as listenToEvenetsWebsql } from './websqlw';
-import { Principal } from '../app/services/types';
+import { IWorkerMessage } from '../types';
+import { EventSource } from '../eventSource';
+import { workerCtx, setSettings, isRunningInWorker } from './workerCtx';
+import { setEnvironment } from '../environments/environment';
 
-var DEBUG_WORKER = false;
+import * as _ from 'underscore';
 
-var _self: any = self;
+let DEBUG_WORKER = false;
 
-export function bootWorker (messageHandlerFn, startupFn?) {
+export function bootWorker(messageHandlerFn, initFn?) {
+	isRunningInWorker.isRunningInWorker = true;
+	self.addEventListener('message', function (event) {
+		let msg: IWorkerMessage = event.data;
+		let err;
 
-	self.addEventListener('message', function (event) {     
-		var msg: IWorkerMessage = event.data;
-		var err;
-		var startupCalled = false;
-
+		if (!initFn) {
+			initFn = () => {
+				return new Promise((resolve) => {
+					resolve(undefined);
+				});
+			};
+		} else if (!_.isFunction(initFn.then)) {
+			let fn = initFn;
+			initFn = () => {
+				return new Promise((resolve, reject) => {
+					try {
+						let res = fn();
+						resolve(res);
+					} catch (err) {
+						reject(err);
+					}
+				});
+			};
+		}
 
 		if (DEBUG_WORKER) {
 			console.log('worker: ' + msg.workerName + ': ' + msg.messageName);
 		}
 
 		try {
-
 			if ('workerId' === msg.messageName) {
 				workerCtx.workerId = msg.messageData.workerId;
 				workerCtx.workerName = msg.workerName;
-				console.log('worker: ' + msg.workerName + ': ' + workerCtx.workerId + ' :' + 'started');
+				setSettings(msg.messageData.settings);
+				setEnvironment(msg.messageData.environment);
 				event.ports[0].postMessage({
-					workerId: workerCtx.workerId
-				}); 
-				if (startupFn) {
-					if (!startupCalled) {
-						startupCalled = true;
-						startupFn();
-					}
-				}
-				return;
-			} 
-
-			if (!((workerCtx.workerId === msg.workerId) // this is message comming from main thread handler for this worker 
-				|| (workerCtx.workerId === msg.dstWorkerId))) { // this is message from other worker for this worker forwarded to this worker by main thread handler for other worker, see: app/services/worker.ts forwardMessageToWorker()
-				console.error('workers/worker: workerId differs');
-				err = new Error('workers/worker: workerId differs');
-				event.ports[0].postMessage({
-					err: '' + err
+					workerId: workerCtx.workerId,
 				});
+				return;
+			}
+
+			if (
+				!(workerCtx.workerId === msg.workerId || workerCtx.workerId === msg.dstWorkerId) // this is message comming from main thread handler for this worker
+			) {
+				console.error('worker: workerId differs');
+				err = new Error('worker: workerId differs');
+				event.ports[0].postMessage({
+					err: '' + err,
+				});
+				return;
+			}
+
+			if ('workerInit' === msg.messageName) {
+				initFn().then(
+					(result) => {
+						event.ports[0].postMessage({
+							result: result,
+						});
+					},
+					(err) => {
+						console.error('worker: ' + msg.workerName + ': ' + workerCtx.workerId + ' : ' + 'initialization failed: ' + err, err);
+						event.ports[0].postMessage({
+							err: '' + err,
+						});
+					}
+				);
 				return;
 			}
 
@@ -54,17 +81,18 @@ export function bootWorker (messageHandlerFn, startupFn?) {
 				setSettings(msg.messageData.settings);
 				event.ports[0].postMessage({});
 				return;
-			} 
+			}
 			if ('offline' === msg.messageName) {
 				event.ports[0].postMessage({});
 				workerCtx.offline = msg.messageData.offline;
+				EventSource.offlineEventSource.generateEvent(msg.messageData.offline);
 				return;
-			} 
+			}
 			if ('device' === msg.messageName) {
 				event.ports[0].postMessage({});
 				workerCtx.device = msg.messageData.device;
 				return;
-			} 
+			}
 			if ('appVersion' === msg.messageName) {
 				event.ports[0].postMessage({});
 				workerCtx.appVersion = msg.messageData.appVersion;
@@ -72,7 +100,7 @@ export function bootWorker (messageHandlerFn, startupFn?) {
 			}
 			if ('environment' === msg.messageName) {
 				event.ports[0].postMessage({});
-				workerCtx.environment = msg.messageData.environment
+				setEnvironment(msg.messageData.environment);
 				return;
 			}
 			if ('principal' === msg.messageName) {
@@ -81,20 +109,20 @@ export function bootWorker (messageHandlerFn, startupFn?) {
 				return;
 			}
 
-			if (listenToEvenetsWebsql(event)) {
-				return;
-			}
-
 			if (messageHandlerFn(event)) {
 				return;
+			} else {
+				console.error(`worker: unknown message: ${msg.messageName}`);
+				event.ports[0].postMessage({
+					err: `worker: unknown message: ${msg.messageName}`,
+				});
 			}
-
 		} catch (err) {
-			console.error('workerCommon: listenToEvenets(): error: ');
+			console.error('worker: listenToEvenets(): error: ');
 			console.dir(err);
 			event.ports[0].postMessage({
-				err: '' + err
+				err: '' + err,
 			});
 		}
-	});    
+	});
 }

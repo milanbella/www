@@ -1,27 +1,49 @@
-import { promiseReject } from '../app/common/utils';
-import { IWorkerMessage, WorkerCtx }  from '../app/services/types';
-import { NET_WORKER }  from '../app/services/types';
-import { pingHttp as basePingHttp } from './../app/services/pinghttp';
-import { Principal } from '../app/services/types';
+import { WorkerCtx } from '../types';
+import { Principal } from '../types';
 
-var _self: any = self;
-
-export var workerCtx: WorkerCtx  = {
+export let workerCtx: WorkerCtx = {
 	workerId: null,
 	workerName: 'unknown',
 	offline: true,
-	device: {},
+	device: {
+		manufacturer: '',
+		model: '',
+		operatingSystem: '',
+		osVersion: '',
+		platform: '',
+		uuid: '',
+	},
 	settings: {},
 	appVersion: null,
-	environment: null,
-	principal: null, 
-}
-
-export var settings: any = {
-	settings: {}
+	principal: null,
 };
 
-export function setSettings (_settings) {
+export let settings: any = {
+	settings: {},
+};
+
+let settingsChangeFns = [];
+
+export function setSettings(_settings) {
 	workerCtx.settings = _settings;
 	settings.settings = _settings;
+	settingsChangeFns.forEach((fn) => {
+		fn(settings);
+	});
 }
+
+export function onSettingsChange(fn) {
+	let i = settingsChangeFns.length;
+	settingsChangeFns.push(fn);
+	return function () {
+		settingsChangeFns.splice(i, 1);
+	};
+}
+
+export let isRunningInWorker = {
+	isRunningInWorker: false,
+};
+
+export let savedPrincipal = {
+	savedPrincipal: null as Principal,
+};
