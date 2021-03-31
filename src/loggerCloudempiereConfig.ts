@@ -1,0 +1,1 @@
+export let LOGGER_CLOUDEMPIERE_ENVIRNONMENT = 'dev';

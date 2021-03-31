@@ -1,16 +1,16 @@
-# cd-www
+# www
 cloudempire common www functionality
 
 #### To build production version.
 
 ```
-$ ./build.sh
+$ scripts/build.sh
 ```
 
 #### To build development version.
 
 ```
-$ ./build.sh dev
+$ scripts/build.sh dev
 ```
 
 ### To publish new version:
