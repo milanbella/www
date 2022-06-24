@@ -35,7 +35,7 @@
     "express": "^4.17.1",
     "help": "^3.0.2",
     "is-plain-object": "^5.0.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "pouchdb": "^7.2.1",
     "pouchdb-browser": "^7.2.1",
     "pouchdb-debug": "^7.2.1",
